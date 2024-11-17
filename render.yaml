@@ -1,0 +1,20 @@
+# Exported from Render on 2024-11-17T04:00:36Z
+services:
+- type: web
+  name: escrow-backend
+  runtime: node
+  repo: https://github.com/chuco666/Client-Transaction-Index-Structure
+  plan: free
+  envVars:
+  - key: .env
+    sync: false
+  - key: JWT_SECRET
+    sync: false
+  - key: MONGODB_URI
+    sync: false
+  - key: node
+    sync: false
+  region: oregon
+  buildCommand: yarn
+  startCommand: node server.js
+version: "1"
